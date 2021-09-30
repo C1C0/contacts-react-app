@@ -5,7 +5,7 @@ import { Contacts } from '../Components/Contacts';
 import { useContacts } from './AppLogic';
 
 function App() {
-  const {addContact}= useContacts([]); 
+  const {contacts, addContact}= useContacts([]); 
 
   return (
     <div className="App container">
@@ -13,7 +13,7 @@ function App() {
 
       <AddingContactForm onAddContact={addContact}/>
 
-      <Contacts />
+      <Contacts contacts={contacts}/>
     </div>
   );
 }

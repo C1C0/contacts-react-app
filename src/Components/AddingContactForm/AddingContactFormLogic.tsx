@@ -5,5 +5,5 @@ export const addContact = (e: React.FormEvent<HTMLFormElement>, addContactCallba
     const name = (nameInput as HTMLInputElement).value;
 
     // create contact
-    addContactCallback(name);
+    addContactCallback({id: Math.random() * (10000) + 1 ,name: name});
 };

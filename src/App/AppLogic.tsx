@@ -10,12 +10,10 @@ const useContacts = (initContacts: Contact[]) => {
    * @param contact
    */
   const addContact = (contact: Contact): void => {
-    console.log(contact);
-
     setContact([...contacts, contact]);
   };
 
-  return { addContact };
+  return { contacts, addContact };
 };
 
 export { useContacts };
